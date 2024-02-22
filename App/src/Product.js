@@ -44,7 +44,7 @@ const Product = () => {
           
           
       <div className="Product">
-        <h1>Notre Produits</h1>
+        <h1>Nos Produits</h1>
         <div className="product">
           {Products.map((productItem) => (
             <>

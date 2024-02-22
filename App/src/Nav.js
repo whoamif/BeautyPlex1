@@ -20,7 +20,7 @@ const Nav = () => {
          <div className="lien">
           <ul className="lienLarge" id={resNav === true ? "resTon":"resToff"}>
           <li className={location.pathname === '/' ? 'active' : ''}><Link to="/">Accueil</Link></li>
-          <li className={location.pathname === '/products' ? 'active' : ''}><Link to="/products">Produit</Link></li>
+          <li className={location.pathname === '/products' ? 'active' : ''}><Link to="/products">Produits</Link></li>
           <li><a href="mailto:beautyplex00@gmail.com">Contact</a></li>
           </ul>
           <button className="res-nav" onClick={handleNav}>

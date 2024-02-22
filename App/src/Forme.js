@@ -72,11 +72,7 @@ const Forme = () => {
   return (
     <>
       <Nav />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      
       <div className="Form">
         <div className="ProductItem">
           <div className="img">
