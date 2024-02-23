@@ -50,7 +50,7 @@ const Forme = () => {
         },
       };
       const response = await axios.post(
-        "http://127.0.0.1:8000/submit-form/",
+        "https://beautyplex.onrender.com/submit-form/",
         formData
       );
       console.log("Form submitted successfully:", response.data);
