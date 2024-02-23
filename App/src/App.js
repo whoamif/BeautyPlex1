@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './Nav';
 import Home from './Home';
 import Footer from "./Footer";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   
 
