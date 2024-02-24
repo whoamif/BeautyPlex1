@@ -9,6 +9,7 @@
 body {
   box-sizing: border-box;
   margin: auto;
+  background-color: #015699;
   overflow-x: hidden;
 }
 
