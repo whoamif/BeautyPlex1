@@ -159,6 +159,9 @@ li {
   nav .titre img {
     width: 20vw;
   }
+  .App{
+    padding: 5%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -169,6 +172,9 @@ li {
   
   .lien{
     position: relative;
+  }
+  .App{
+    padding: 5%;
   }
   #resTon{
     display: flex;
@@ -233,10 +239,11 @@ li {
   #Logo {
     height: 5px;
   }
-  
+  .App{
+    padding: 5%;
+  }
   .Home {
     flex-direction: column;
-    padding: auto;
   }
   .Home .Right {
     margin: 0px;
@@ -549,11 +556,13 @@ box-shadow: 20px 20px 20px  #07262623;
 }
 
 /* Media Query for Responsive Styling */
+/* Media Query for Responsive Styling */
 @media screen and (max-width: 768px) {
+  /* Styles for screens up to 768px width */
   .footer {
     flex-direction: column; 
     align-items: flex-start; 
-    height: 250px; 
+    height: max-content; 
     padding-left: 10%;
   }
 
@@ -564,7 +573,25 @@ box-shadow: 20px 20px 20px  #07262623;
   .footer ul li {
     min-width: auto; 
   }
-  .footer h4{
+
+  .footer h4 {
     display: none;
   }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for screens between 769px and 1024px width */
+  /* Example styles */
+  .footer {
+    padding-left: 15%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Styles for screens larger than 1024px width */
+  /* Example styles */
+  .footer {
+    padding-left: 20%;
+  }
+}
+
