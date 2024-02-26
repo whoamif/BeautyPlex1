@@ -602,10 +602,9 @@ box-shadow: 20px 20px 20px  #07262623;
   }
 }
 @media screen and (min-width: 1025px) {
-  /* Styles for screens larger than 1024px width */
-  /* Example styles */
+  
   .footer {
-    padding-left: 20%;
+    padding-left: 5%;
   }
 }
 
