@@ -21,6 +21,8 @@ const Home = () => {
         </p>
 
         <br></br>
+        <Link to={"/products"} id="hh" ><a id="ExploreProduct" >Explorer les produits</a></Link>   
+
       </div>
       <div className="Right">
         <img id="product" src="./bioplex.png" alt="bioplex" />
