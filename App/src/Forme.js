@@ -1,16 +1,63 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Nav from "./Nav"; 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 const cities = [
-  "Adrar", "Chlef", "Laghouat", "Oum El Bouaghi", "Batna", "Béjaïa", "Biskra", "Béchar", "Blida", "Bouira", "Tamanrasset", "Tébessa", "Tlemcen", "Tiaret", "Tizi Ouzou", "Alger", "Djelfa", "Jijel", "Sétif", "Saïda", "Skikda", "Sidi Bel Abbès", "Annaba", "Guelma", "Constantine", "Médéa", "Mostaganem", "M'Sila", "Mascara", "Ouargla", "Oran", "El Bayadh", "Illizi", "Bordj Bou Arreridj", "Boumerdès", "El Tarf", "Tindouf", "Tissemsilt", "El Oued", "Khenchela", "Souk Ahras", "Tipaza", "Mila", "Aïn Defla", "Naâma", "Aïn Témouchent", "Ghardaïa", "Relizane"
+  "أدرار",
+  "الشلف",
+  "الأغواط",
+  "أم البواقي",
+  "باتنة",
+  "بجاية",
+  "بسكرة",
+  "بشار",
+  "البليدة",
+  "البويرة",
+  "تمنراست",
+  "تبسة",
+  "تلمسان",
+  "تيارت",
+  "تيزي وزو",
+  "الجزائر",
+  "الجلفة",
+  "جيجل",
+  "سطيف",
+  "سعيدة",
+  "سكيكدة",
+  "سيدي بلعباس",
+  "عنابة",
+  "قالمة",
+  "قسنطينة",
+  "المدية",
+  "مستغانم",
+  "المسيلة",
+  "معسكر",
+  "ورقلة",
+  "وهران",
+  "البيض",
+  "اليزي",
+  "برج بوعريريج",
+  "بومرداس",
+  "الطارف",
+  "تندوف",
+  "تيسمسيلت",
+  "الوادي",
+  "خنشلة",
+  "ورقلة",
+  "تيارت",
+  "تيبازة",
+  "ميلة",
+  "عين الدفلى",
+  "النعامة",
+  "عين تموشنت",
+  "الغرداية",
+  "غليزان",
 ];
 
 const Forme = () => {
-  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNumber] = useState("");
@@ -19,7 +66,7 @@ const Forme = () => {
   const [productTitle, setProductTitle] = useState("");
   const [productPrice, setProductPrice] = useState(0);
   const [imgUrl, setImgUrl] = useState("");
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const storedProductInfo = localStorage.getItem("productInfo");
@@ -33,7 +80,7 @@ const Forme = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); 
+    setLoading(true);
     try {
       const formData = {
         user_info: {
@@ -55,7 +102,7 @@ const Forme = () => {
       );
       console.log("Form submitted successfully:", response.data);
       localStorage.removeItem("productInfo");
-      toast.success("E-mail envoyé avec succès");
+      toast.success("تم إرسال البريد الإلكتروني بنجاح");
       setBaladiya("");
       setCity("");
       setEmail("");
@@ -63,7 +110,7 @@ const Forme = () => {
       setName("");
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Envoi échoué");
+      toast.error("فشل في الإرسال");
     } finally {
       setLoading(false); // Stop loading indicator
     }
@@ -93,7 +140,8 @@ const Forme = () => {
               type="text"
               id="name"
               value={name}
-              placeholder="nom et prénom"
+              className="rtl-input"
+              placeholder="الاسم واللقب"
               onChange={(e) => setName(e.target.value)}
               required
             />
@@ -103,7 +151,8 @@ const Forme = () => {
               type="email"
               id="email"
               value={email}
-              placeholder="Email"
+              className="rtl-input"
+              placeholder="البريد الإلكتروني"
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -112,8 +161,9 @@ const Forme = () => {
             <input
               type="tel"
               id="phoneNum"
+              className="rtl-input"
               value={phoneNum}
-              placeholder="numéro de téléphone"
+              placeholder="رقم الهاتف"
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
             />
@@ -123,7 +173,8 @@ const Forme = () => {
               type="text"
               id="baladiya"
               value={baladiya}
-              placeholder="commune"
+              className="rtl-input"
+              placeholder="البلدية"
               onChange={(e) => setBaladiya(e.target.value)}
               required
             />
@@ -132,10 +183,11 @@ const Forme = () => {
             <select
               id="city"
               value={city}
+              className="rtl-input"
               onChange={(e) => setCity(e.target.value)}
               required
             >
-              <option value="">Sélectionner la ville</option>
+              <option value="">اختر المدينة</option>
               {cities.map((city) => (
                 <option key={city} value={city}>
                   {city}
@@ -144,7 +196,7 @@ const Forme = () => {
             </select>
           </div>
           <button type="submit" disabled={loading}>
-            {loading ? 'Loading...' : 'Submit'}
+            {loading ? "جار التحميل..." : "إرسال"}
           </button>
         </form>
       </div>
@@ -155,7 +207,7 @@ const Forme = () => {
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
-        rtl={false}
+        rtl={true} // Set RTL to true for Arabic text
         pauseOnFocusLoss
         draggable
         pauseOnHover
