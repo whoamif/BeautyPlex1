@@ -7,12 +7,19 @@ const Home = () => {
     <div className="Home">
       <div className="Left">
         <h1>
-          <TypeAnimation
-            sequence={["BEAUTYPLEX", 1000]}
-            speed={20}
-            style={{}}
-            repeat={Infinity} // Set repeat to true for infinite repetition
-          />
+        <TypeAnimation
+                sequence={[
+                  'Beauty . . . ',
+                  1000,
+                  'Plex. . .   ',
+                  1000,
+                  'BeautyPlex . . .  ',
+                  1000,
+                ]}
+                speed={20}
+                style={{ fontSize: '2em' }}
+                repeat={Infinity}
+              />
         </h1>
         <p className="description">
           Bienvenue dans notre boutique de produits cosmétiques pour vous offrir
