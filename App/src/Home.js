@@ -8,7 +8,7 @@ const Home = () => {
       <div className="Left">
         <h1>
           <TypeAnimation
-            sequence={["BeautyPlex  ", 1000]}
+            sequence={["BeautyPlex  ", 1000, "", 1000]}
             speed={20}
             style={{ fontSize: "1em" }}
             repeat={Infinity}
