@@ -9,9 +9,9 @@ const Home = () => {
         <h1>
         <TypeAnimation
                 sequence={[
-                  'Beauty . . . ',
+                  'Beauty  ',
                   1000,
-                  'Plex. . .   ',
+                  'Plex ',
                   1000,
                   "Beauty'Plex  ",
                   1000,
