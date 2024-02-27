@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 body {
   box-sizing: border-box;
   margin: auto;
-  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
 }
 
 * {
@@ -75,7 +75,7 @@ li {
 .res-nav {
   height: 26px;
   display: none;
-  margin: 10px;
+  margin: 10px 10px 10px 0;
   background-color: transparent;
   border: none;
 }
@@ -122,7 +122,6 @@ li {
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  width: 100vw;
 }
 
 .searchInput input {
@@ -150,10 +149,10 @@ li {
   }
 
   nav .titre img {
-    width: 20vw;
+    width: 20%;
   }
   .App {
-    padding: 5%;
+    /* padding: 5%; */
   }
 }
 
@@ -166,19 +165,20 @@ li {
     position: relative;
   }
   .App {
-    padding: 5%;
+    /* padding: 5%; */
   }
   #resTon {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: baseline;
+    align-items: center;
     position: absolute;
+    padding: 0 5em;
     top: 35px;
-    left: 0px;
+    right: 0px;
     background-color: #1a1a1ae1;
     height: 100vh;
-    width: 40vw;
+    width: max-content;
   }
   #resTon li {
     margin: 10px;
@@ -226,11 +226,33 @@ li {
 }
 
 @media only screen and (max-width: 720px) {
+  .ProductItem {
+    display: flex;
+    border-radius: 2px;
+    background-color: #05e601;
+    max-width: 60px;
+    margin: 0px;
+    box-shadow: 2px 2px 4px 2px #5762621a;
+  }
+
+  #ProductImg {
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .product {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
   #Logo {
     height: 5px;
   }
   .App {
-    padding: 5%;
+    /* padding: 5%; */
   }
   .Home {
     flex-direction: column;
@@ -249,11 +271,27 @@ li {
   .Home .Right img {
     display: none;
   }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer h4 {
+    display: none;
+  }
 }
 
 /* --------------------------------------landing page------------------------------------------------------------- */
 .home {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -261,8 +299,8 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
-  width: 80vw;
+  align-self: center;
+  width: 80%;
 }
 
 .Left {
@@ -341,7 +379,7 @@ li {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  width: 20%;
+  width: calc(50% - 20px);
   max-width: 300px;
   min-width: 260px;
   background-color: #fbfbfb;
@@ -395,8 +433,6 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  width: 100vw;
   background-image: linear-gradient(to bottom right, #dceefb, #ffffff);
 }
 
@@ -494,7 +530,7 @@ li {
 }
 .footer {
   gap: 15%;
-  padding: 2%;
+  padding: 2% 0;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -506,14 +542,14 @@ li {
 .footer ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .footer ul li {
-  min-width: 110px;
+  /* min-width: 110px; */
 }
 
 .footer a {
@@ -535,61 +571,15 @@ li {
   font-weight: 300;
 }
 
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
 #social {
   font-size: x-large;
 }
 #social:hover {
   color: #015699;
-}
-
-/* Media Query for Responsive Styling */
-/* Media Query for Responsive Styling */
-@media screen and (max-width: 768px) {
-  /* Styles for screens up to 768px width */
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    height: max-content;
-    padding-left: 10%;
-  }
-
-  .footer ul {
-    display: none;
-  }
-
-  .footer ul li {
-    min-width: auto;
-  }
-
-  .footer h4 {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Styles for screens between 769px and 1024px width */
-  /* Example styles */
-  .footer {
-    padding-left: 15%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .product-container .product-item {
-    flex: 0 1 calc(50% - 20px); /* Two products per row on smaller screens */
-  }
-}
-@media screen and (max-width: 1200px) {
-  .product-container .product-item {
-    flex: 0 1 calc(50% - 20px); /* Two products per row on smaller screens */
-  }
-}
-@media screen and (max-width: 767px) {
-  .product-container .product-item {
-    flex: 0 1 calc(50% - 20px); /* Two products per row on phone screens */
-  }
-}
-@media screen and (min-width: 1025px) {
-  .footer {
-    padding-left: 5%;
-  }
 }

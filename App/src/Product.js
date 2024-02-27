@@ -142,12 +142,12 @@ const Product = () => {
   ]);
   return (
     <div>
-      <Nav></Nav>
+      <Nav/>
       <br></br>
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
+      
 
       <div className="Product">
         <h1>Nos Produits</h1>
@@ -159,7 +159,7 @@ const Product = () => {
           ))}
         </div>
       </div>
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 };

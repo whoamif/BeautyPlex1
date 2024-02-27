@@ -7,21 +7,14 @@ const Home = () => {
     <div className="Home">
       <div className="Left">
         <h1>
-        <TypeAnimation
-                sequence={[
-                  'Beauty  ',
-                  1000,
-                  'Plex ',
-                  1000,
-                  "Beauty'Plex  ",
-                  1000,
-                ]}
-                speed={20}
-                style={{ fontSize: '1em' }}
-                repeat={Infinity}
-              />
+          <TypeAnimation
+            sequence={["BeautyPlex  ", 1000]}
+            speed={20}
+            style={{ fontSize: "1em" }}
+            repeat={Infinity}
+          />
         </h1>
-        
+
         <p className="description">
           Bienvenue dans notre boutique de produits cosmétiques pour vous offrir
           une expérience de beauté incomparable. Découvrez une sélection
@@ -29,8 +22,9 @@ const Home = () => {
         </p>
 
         <br></br>
-        <Link to={"/products"} id="hh" ><a id="ExploreProduct" >Explorer les produits</a></Link>   
-
+        <Link to={"/products"} id="hh">
+          <a id="ExploreProduct">Explorer les produits</a>
+        </Link>
       </div>
       <div className="Right">
         <img id="product" src="./bioplex.png" alt="bioplex" />
