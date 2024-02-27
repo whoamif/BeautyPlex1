@@ -13,14 +13,15 @@ const Home = () => {
                   1000,
                   'Plex. . .   ',
                   1000,
-                  'BeautyPlex . . .  ',
+                  "Beauty'Plex  ",
                   1000,
                 ]}
                 speed={20}
-                style={{ fontSize: '2em' }}
+                style={{ fontSize: '1em' }}
                 repeat={Infinity}
               />
         </h1>
+        
         <p className="description">
           Bienvenue dans notre boutique de produits cosmétiques pour vous offrir
           une expérience de beauté incomparable. Découvrez une sélection
