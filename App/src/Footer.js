@@ -33,21 +33,19 @@ function Footer() {
         </li>
       </ul>
 
-      <div>
+      <div className="foot">
         <p>© BEAUTYPLEX. All Rights Reserved 2024</p>
-        <br></br>
-        <a
-          id="social"
-          href="https://www.facebook.com/profile.php?id=61550788340750"
-        >
-          <FontAwesomeIcon icon={faFacebook} />
-        </a>
-        <br></br>
-        <br></br>
-
-        <a id="social" href="https://www.instagram.com/beautyplexdz/">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
+        <div className="links">
+          <a
+            id="social"
+            href="https://www.facebook.com/profile.php?id=61550788340750"
+          >
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
+          <a id="social" href="https://www.instagram.com/beautyplexdz/">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+        </div>
       </div>
     </div>
   );
