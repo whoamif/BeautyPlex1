@@ -8,7 +8,7 @@ const RoutersApp = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/forme/:productId" element={<FormPage />} />
+        <Route path="/forme/:id" element={<FormPage />} />
         <Route path='/' element={<Product />}></Route>
         
       </Routes>
