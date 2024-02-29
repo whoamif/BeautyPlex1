@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import './App.css';
 import Nav from './Nav';
-import Home from './Home';
+import Product from './Product';
 import Footer from "./Footer";
 function App() {
   
@@ -16,7 +16,7 @@ function App() {
           <br></br>
           <br></br>
           <br></br>
-        <Home />
+        <Product />
           <br></br>
           <br></br>
           <br></br>
