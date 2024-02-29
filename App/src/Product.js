@@ -152,10 +152,11 @@ const Product = () => {
       <div className="Product">
         <h1>Nos Produits</h1>
         <div className="product">
-          {Products.map((productItem) => (
-            <>
+          {/* Link each product to its detailed view */}
+          {Products.map((productItem, index) => (
+            <Link key={index} to={`/forme/${index}`}>
               <ProductItem productItem={productItem} />
-            </>
+            </Link>
           ))}
         </div>
       </div>
