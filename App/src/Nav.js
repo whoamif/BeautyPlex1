@@ -12,17 +12,16 @@ const Nav = () => {
     <div className="nav">
       <div className="navC">
         <div className="titre">
-          <Link to="/">
-            {" "}
+          
             <img id="Logo" src="./logo.png" alt="Description of the image" />
-          </Link>
+          
         </div>
 
         <div className="lien">
           <ul className="lienLarge" id={resNav === true ? "resTon" : "resToff"}>
             
             <li className={location.pathname === "/" ? "active" : ""}>
-              <Link to="/products">Produits</Link>
+              <Link to="/">Produits</Link>
             </li>
             <li>
               <a href="mailto:beautyplex00@gmail.com">Contact</a>

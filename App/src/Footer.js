@@ -23,8 +23,8 @@ function Footer() {
 
       <ul>
         
-        <li className={location.pathname === "/products" ? "active" : ""}>
-          <Link to="/products">Produit</Link>
+        <li className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/">Produit</Link>
         </li>
         <li>
           <a href="mailto:beautyplex00@gmail.com">Contact</a>

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ProductItem from "./ProductItem";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
-
 const Product = () => {
   const [Products, setproducts] = useState([
     {
@@ -160,7 +160,7 @@ const Product = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
