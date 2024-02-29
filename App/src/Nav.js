@@ -21,7 +21,7 @@ const Nav = () => {
         <div className="lien">
           <ul className="lienLarge" id={resNav === true ? "resTon" : "resToff"}>
             
-            <li className={location.pathname === "/products" ? "active" : ""}>
+            <li className={location.pathname === "/" ? "active" : ""}>
               <Link to="/products">Produits</Link>
             </li>
             <li>
