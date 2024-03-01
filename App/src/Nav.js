@@ -12,8 +12,10 @@ const Nav = () => {
     <div className="nav">
       <div className="navC">
         <div className="titre">
-          
-            <img id="Logo" src="./logo.png" alt="Description of the image" />
+        <Link to="/">
+        <img id="Logo" src="/logo.png" alt="logo" />
+        </Link>
+           
           
         </div>
 
@@ -31,7 +33,7 @@ const Nav = () => {
             <img
               id="res-nav"
               src="./res-nav.png"
-              alt="Description of the image"
+              alt=""
             />
           </button>
         </div>
