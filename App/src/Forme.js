@@ -5,7 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
-
+import { useParams } from "react-router-dom";
+import { produits } from "./data";
 const cities = [
   "أدرار",
   "الشلف",
@@ -56,9 +57,19 @@ const cities = [
   "عين تموشنت",
   "الغرداية",
   "غليزان",
+  "ال مغير",
+  "ال منعة",
+  "أولاد جلال",
+  "بني عباس",
+  "تميمون",
+  "تمنراست",
+  "القلعة",
+  "عين صالح",
+  "تقرت",
 ];
 
 const Forme = () => {
+
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -69,16 +80,23 @@ const Forme = () => {
   const [productPrice, setProductPrice] = useState(0);
   const [imgUrl, setImgUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const [product, setProduct] = useState() 
+const { id } = useParams()
 
-  useEffect(() => {
-    const storedProductInfo = localStorage.getItem("productInfo");
-    if (storedProductInfo) {
-      const productInfo = JSON.parse(storedProductInfo);
-      setProductTitle(productInfo.title);
-      setProductPrice(productInfo.price);
-      setImgUrl(productInfo.imgUrl);
+useEffect(() => {
+  if (produits) {
+    const selectedProduct = produits.find(
+      (product) => product.id.toString() === id
+    );
+    if (selectedProduct) {
+      setProduct(selectedProduct);
+      setProductTitle(selectedProduct.title);
+      setProductPrice(selectedProduct.price);
+      setImgUrl(selectedProduct.imgUrl);
     }
-  }, []);
+  }
+}, [id]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
