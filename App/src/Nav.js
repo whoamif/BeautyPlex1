@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 const Nav = () => {
   const location = useLocation();
@@ -7,6 +7,12 @@ const Nav = () => {
   const handleNav = () => {
     activateResVane(!resNav);
   };
+  const scrollToFooter = () => {
+    const footer = document.getElementById("footer");
+    footer.scrollIntoView({ behavior: "smooth" });
+  };
+  
+
 
   return (
     <div className="nav">
@@ -26,7 +32,7 @@ const Nav = () => {
               <Link to="/">Produits</Link>
             </li>
             <li>
-              <a href="mailto:beautyplex00@gmail.com">Contact</a>
+            <a  onClick={scrollToFooter}>Contact</a>
             </li>
           </ul>
           <button className="res-nav" onClick={handleNav}>

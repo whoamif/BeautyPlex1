@@ -11,7 +11,7 @@ function Footer() {
     setLinkState(link);
   };
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
       <div className="firstleft">
         <h1>BEAUTYPLEX</h1>
         <br />
