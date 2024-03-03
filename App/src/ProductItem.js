@@ -12,7 +12,6 @@ const ProductItem = ({ productItem, key }) => {
       imgUrl,
     };
     localStorage.setItem("productInfo", JSON.stringify(productInfo));
-    navigate("/forme");
   };
 
   return (

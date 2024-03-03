@@ -18,7 +18,7 @@ const Product = () => {
         <h1>Nos Produits</h1>
         <div className="product">
           {produits.map((productItem) => ( // Use produits array directly
-            <Link key={productItem.id} to={{ pathname: `/forme/${productItem.id}`, state: { product: productItem } }}>
+            <Link key={productItem.id} to={{ pathname: `/${productItem.id}`, state: { product: productItem } }}>
               <ProductItem productItem={productItem} />
             </Link>
           ))}

@@ -35,6 +35,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.lien li {
+  cursor: pointer;
+}
 
 .lienLarge {
   display: flex;
@@ -146,6 +149,7 @@ li {
 @media only screen and (max-width: 1200px) {
   .lienLarge li a {
     font-size: 12px;
+    cursor: pointer;
   }
 
   nav .titre img {
